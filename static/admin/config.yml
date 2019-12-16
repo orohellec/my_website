@@ -12,6 +12,7 @@ collections:
     folder: src/markdown-pages/posts
     create: true
     fields:
+      - { name: type, label: Type }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
