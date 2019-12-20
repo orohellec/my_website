@@ -4,7 +4,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
-  const aboutPageTemplate = path.resolve('src/templates/aboutTemplate.js')
+  const indexPageTemplate = path.resolve('src/templates/indexTemplate.js')
+  const projectPageTemplate = path.resolve('src/templates/projectTemplate.js')
+  const portfolioPageTemplate = path.resolve('src/templates/portfolioTemplate.js')
 
   const result = await graphql(`
     {
@@ -17,7 +19,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-      about: allMarkdownRemark(filter: {frontmatter: {path: {eq: "/about"}}}) {
+      projects: allMarkdownRemark(filter: {frontmatter: {type: {eq: "project"}}}) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+      index: allMarkdownRemark(filter: {frontmatter: {type: {eq: "home"}}}) {
         edges {
           node {
             frontmatter {
@@ -36,8 +47,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   createPage({
-    path: result.data.about.edges[0].node.frontmatter.path,
-    component: aboutPageTemplate,
+    path: result.data.index.edges[0].node.frontmatter.path,
+    component: indexPageTemplate,
     context: {}, // additional data can be passed via context
   })
 
@@ -47,5 +58,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: blogPostTemplate,
       context: {}, // additional data can be passed via context
     })
+  })
+
+  result.data.projects.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: projectPageTemplate,
+      context: {}, // additional data can be passed via context
+    })
+  })
+  
+  createPage({
+    path: "/portfolio",
+    component: portfolioPageTemplate
   })
 }

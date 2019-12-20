@@ -6,18 +6,16 @@ export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { html } = markdownRemark
+  const { frontmatter } = markdownRemark
   return (
     <Layout>
-    <div className="about-container">
-      <div
-        className="about-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    </div>
+      <div className="project-container">
+        <div>{frontmatter.title}</div>
+      </div>
     </Layout>
   )
 }
+
 
 export const pageQuery = graphql`
   query($path: String!) {
