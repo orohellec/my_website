@@ -13,6 +13,7 @@ export default function Template({ data }) {
     return(
       <Grid item >
         <Card
+          link={frontmatter.path}
           filename={frontmatter.imgName}
           alt={frontmatter.imgName}
           title={frontmatter.title}

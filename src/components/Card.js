@@ -18,7 +18,7 @@ export default function ImgMediaCard(props) {
 
   return (
     <Card className={classes.card}>
-      <ContainerLink to='sites/shop-ecommerce'>
+      <ContainerLink to={props.link}>
         <Image filename={props.filename} alt={props.alt}/>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
