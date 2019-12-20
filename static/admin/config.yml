@@ -17,3 +17,13 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+  - name: projet
+    label: Projet
+    folder: src/markdown-pages/projects
+    create: true
+    fields:
+      - { name: type, label: Type }
+      - { name: imgName, label: Image File }
+      - { name: description, label: Description }
+      - { name: path, label: Path }
+      - { name: title, label: Title }
