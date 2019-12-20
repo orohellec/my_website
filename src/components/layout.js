@@ -37,8 +37,8 @@ const Layout = ({ children }) => {
         />
       </Helmet>
       <CssBaseline />
-      <Header siteTitle={data.site.siteMetadata.title} />
       <ThemeProvider theme={theme}>
+        <Header siteTitle={data.site.siteMetadata.title} />
         <Container>
           <main>{children}</main>
         </Container>
