@@ -12,6 +12,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Container } from '@material-ui/core'
 
 import Header from "./header"
+import { Helmet } from 'react-helmet';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from '../theme';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,10 +30,19 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+        />
+      </Helmet>
+      <CssBaseline />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Container>
-        <main>{children}</main>
-      </Container>
+      <ThemeProvider theme={theme}>
+        <Container>
+          <main>{children}</main>
+        </Container>
+      </ThemeProvider>
     </>
   )
 }
