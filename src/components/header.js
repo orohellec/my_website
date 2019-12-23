@@ -11,11 +11,10 @@ import {
 import NavLink from './navLink';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import OutsideLink from "./outsideLink";
 
 const Header = ({ siteTitle }) => {
   return (
-      <AppBar position="static" style={{marginBottom: '30px'}}>
+      <AppBar position="static" >
         <Box mx={5}>
           <Grid container direction="row" justify="space-between">
             <Grid item>
@@ -28,12 +27,12 @@ const Header = ({ siteTitle }) => {
               </Grid>
             </Grid>
             <Grid item>
-              <OutsideLink href="https://www.linkedin.com/in/olivierrohellec/">
+              <NavLink internLink={false} to="https://www.linkedin.com/in/olivierrohellec/">
                 {<LinkedInIcon />}
-              </OutsideLink>
-              <OutsideLink href="https://github.com/orohellec">
+              </NavLink>
+              <NavLink internLink={false} to="https://github.com/orohellec">
                 {<GitHubIcon />}
-              </OutsideLink>
+              </NavLink>
             </Grid>
           </Grid>
         </Box>

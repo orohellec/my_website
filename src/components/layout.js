@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { Container } from '@material-ui/core'
+import { Container, Box } from '@material-ui/core'
 
 import Header from "./header"
 import { Helmet } from 'react-helmet';
@@ -39,9 +39,11 @@ const Layout = ({ children }) => {
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Container>
-          <main>{children}</main>
-        </Container>
+        <Box my={5}>
+          <Container>
+            <main>{children}</main>
+          </Container>
+        </Box>
       </ThemeProvider>
     </>
   )

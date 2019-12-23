@@ -11,7 +11,7 @@ export default function Template({ data }) {
   const cardList = allMarkdownRemark.edges.map(edge => {
     const { frontmatter } = edge.node
     return(
-      <Grid item >
+      <Grid item xs={12} sm={6} md={4}>
         <Card
           link={frontmatter.path}
           filename={frontmatter.imgName}

@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   outsideLink: {
-    color: 'white',
+    color: 'black',
     display: 'inline-block',
     textDecoration: 'none',
     padding: '0.5rem 0.5rem',

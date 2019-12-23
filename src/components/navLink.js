@@ -12,21 +12,31 @@ const useStyles = makeStyles({
     textDecoration: 'none',
     padding: '0.5rem 0.5rem',
     fontSize: '1.3rem',
+    fontWeight: 'bold',
     '&:hover': {
-      backgroundColor: '#21dafb'
+      backgroundColor: '#296365'
     }
   }
 })
 
-const NavLink = ({children, to}) => {
+const NavLink = ({internLink = true, children, to}) => {
   const classes = useStyles()
-  return (
-    <GatsbyLink 
-      to={to} 
-      className={classes.navLink}
-    >
-      {children}
-    </GatsbyLink>
+  return(
+    internLink ? 
+      <GatsbyLink 
+        to={to} 
+        className={classes.navLink}
+      >
+        {children}
+      </GatsbyLink> :
+      <a 
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes.navLink}
+      >
+        {children}
+      </a>
   )
 }
 

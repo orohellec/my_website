@@ -7,7 +7,8 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   navLink: {
     display: 'inline-block',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    width: '100%'
   }
 })
 

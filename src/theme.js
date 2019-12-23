@@ -21,7 +21,15 @@ const theme = createMuiTheme({
   overrides: {
     MuiTypography: {
       h1: {
-        fontSize: '3rem'
+        fontSize: '2.2rem',
+        fontWeight: 'bold'
+      },
+      h2: {
+        fontSize: '2rem',
+        fontWeight: 'bold'
+      },
+      body1: {
+        fontSize: '1.5rem'
       }
     }
   },
