@@ -5,9 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   outsideLink: {
     color: 'black',
-    display: 'inline-block',
+    display: 'block',
     textDecoration: 'none',
-    padding: '0.5rem 0.5rem',
     fontSize: '1.3rem',
     '&:hover': {
       backgroundColor: '#21dafb'

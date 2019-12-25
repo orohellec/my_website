@@ -9,8 +9,6 @@ import {
 } from '@material-ui/core'
 
 import NavLink from './navLink';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
 
 const Header = ({ siteTitle }) => {
   return (
@@ -25,14 +23,6 @@ const Header = ({ siteTitle }) => {
                 <NavLink to="/portfolio">Portfolio</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
               </Grid>
-            </Grid>
-            <Grid item>
-              <NavLink internLink={false} to="https://www.linkedin.com/in/olivierrohellec/">
-                {<LinkedInIcon />}
-              </NavLink>
-              <NavLink internLink={false} to="https://github.com/orohellec">
-                {<GitHubIcon />}
-              </NavLink>
             </Grid>
           </Grid>
         </Box>

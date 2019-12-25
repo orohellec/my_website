@@ -15,7 +15,8 @@ import Header from "./header"
 import { Helmet } from 'react-helmet';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../theme';
+import Footer from './footer'
+import theme from '../theme'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -44,6 +45,7 @@ const Layout = ({ children }) => {
             <main>{children}</main>
           </Container>
         </Box>
+        <Footer />
       </ThemeProvider>
     </>
   )
