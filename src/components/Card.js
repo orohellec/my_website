@@ -11,11 +11,11 @@ export default function ImgMediaCard(props) {
   return (
     <Card>
       <ContainerLink to={props.link}>
-        <Box height="200px">
+        <Box height="220px">
           <Image filename={props.filename} alt={props.alt} />
         </Box>
         <CardContent>
-          <Typography gutterBottom align="center" variant="h5" component="h2">
+          <Typography gutterBottom align="center" variant="h5">
             {props.title}
           </Typography>
         </CardContent>

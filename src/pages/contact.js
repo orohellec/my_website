@@ -18,7 +18,8 @@ const ContactPage = () => {
     <Layout>
       <Box mx="auto" maxWidth="600px">
       <MainTitle title="Contact"/>
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
         <Grid container direction="column" spacing={3} alignItems="stretch" >
           <Grid item>
             <FormControl fullWidth={true}>
