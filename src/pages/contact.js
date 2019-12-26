@@ -21,6 +21,7 @@ const ContactPage = () => {
         .join("&");
   }
 
+  const [name, setName] = useState("")
   const [email, setEmail]  = useState("")
   const [message, setMessage]  = useState("")
 
@@ -28,7 +29,7 @@ const ContactPage = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", email, message})
+      body: encode({ "form-name": "contact", name, email, message})
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -40,21 +41,24 @@ const ContactPage = () => {
       <Box mx="auto" maxWidth="600px">
         <MainTitle title="Contact"/>
         <form onSubmit={handleSubmit}>
-        {/* <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field"> */}
-          {/* <input type="hidden" name="form-name" value="contact" /> */}
-          <Grid container direction="column" spacing={3} alignItems="stretch" >
+          <Grid container direction="column" spacing={3} alignItems="stretch">
             <Grid item>
-            <FormControl fullWidth={true}>
-              <InputLabel htmlFor="email">Votre email</InputLabel>
-              <Input id="email" value={email} onChange={e => setEmail(e.target.value)}/>
-            </FormControl>
+              <FormControl fullWidth={true}>
+                <InputLabel>Votre nom</InputLabel>
+                <Input name="name" value={name} onChange={e => setName(e.target.value)}/>
+              </FormControl>
+            </Grid>
+            <Grid item>
+              <FormControl fullWidth={true}>
+                <InputLabel>Votre email</InputLabel>
+                <Input name="email" value={email} onChange={e => setEmail(e.target.value)}/>
+              </FormControl>
             </Grid>
             <Grid item>
             <FormControl fullWidth={true}>
               <TextareaAutosize 
                 rowsMin={6} 
-                id="message" 
-                name="message" 
+                name="message" 
                 placeholder="votre message" 
                 value={message}
                 onChange={e => setMessage(e.target.value)}
