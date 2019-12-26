@@ -25,13 +25,22 @@ const ContactPage = () => {
   const [email, setEmail]  = useState("")
   const [message, setMessage]  = useState("")
 
+  const resetFields = () => {
+    setEmail("")
+    setName("")
+    setMessage("")
+  }
+
   const handleSubmit = e => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", name, email, message})
     })
-      .then(() => alert("Success!"))
+      .then(() => {
+        resetFields()
+        alert("Votre email à bien été envoyé !")
+      })
       .catch(error => alert(error));
     e.preventDefault();
   };
