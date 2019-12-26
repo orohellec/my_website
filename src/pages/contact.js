@@ -15,31 +15,30 @@ import MainTitle from "../components/mainTitle"
 
 const ContactPage = () => {
   return (
+    
     <Layout>
       <Box mx="auto" maxWidth="600px">
       <MainTitle title="Contact"/>
       <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
-        <Grid container direction="column" spacing={3} alignItems="stretch" >
-          <Grid item>
-            <FormControl fullWidth={true}>
-              <InputLabel htmlFor="my-input">Votre email</InputLabel>
-              <Input id="my-input" aria-describedby="my-helper-text" />
-            </FormControl>
-          </Grid>
-          <Grid item>
-            <FormControl fullWidth={true}>
-              <TextareaAutosize rowsMin={6} placeholder="votre message" />
-            </FormControl>
-          </Grid>
-          <Grid item justify="center">
-            <Button type="submit" fullWidth={true}>Envoyer</Button>
-          </Grid>
-        </Grid>
+        <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
       </form>
       </Box>
     </Layout>
+    
   )
 }
+
 
 export default ContactPage;
