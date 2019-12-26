@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     color: 'white',
     display: 'inline-block',
     textDecoration: 'none',
-    padding: '0.5rem 0.5rem',
+    padding: '0.7rem',
     fontSize: '1.3rem',
     fontWeight: 'bold',
     '&:hover': {

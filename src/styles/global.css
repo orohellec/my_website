@@ -4,6 +4,6 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
 
 #gatsby-focus-wrapper {
   position: relative;
-  padding-bottom: 120px; /* must be the same values as the height of the footer */
+  padding-bottom: 100px; /* must be the same values as the height of the footer */
   
 }

@@ -6,7 +6,7 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import {
   AppBar,
   Grid,
-  Box,
+  Container,
   IconButton,
   Hidden,
   Collapse,
@@ -27,25 +27,25 @@ const Header = ({siteTitle}) => {
 
   return (
     <AppBar position="sticky">
-      <Box mx={5}>
+      <Container maxWidth='lg'>
         <Hidden only={['xs']}>
-        <Grid container direction="row" justify="space-between">
-          <Grid item>
-            <NavLink to="/">Olivier Rohellec</NavLink>
-          </Grid>
-          <Grid item>
-            <Grid container direction="row">
-              <NavLink to="/portfolio">Portfolio</NavLink>
-              <NavLink to="/contact">Contact</NavLink>
+          <Grid container justify="space-between">
+            <Grid item>
+              <NavLink to="/">Olivier Rohellec</NavLink>
+            </Grid>
+            <Grid item>
+              <Grid container direction="row">
+                <NavLink to="/portfolio">Portfolio</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
         </Hidden>
         <Hidden smUp>
           <Grid container direction="row" justify="flex-end">
             <ClickAwayListener onClickAway={handleClickAway}>
               <IconButton onClick={handleExpandClick}>
-                <MenuIcon color="secondary"/>
+                <MenuIcon fontSize='large' color="secondary"/>
               </IconButton>
             </ClickAwayListener>
           </Grid>
@@ -59,7 +59,7 @@ const Header = ({siteTitle}) => {
             </Grid>
           </Collapse>
         </Hidden>
-      </Box>
+        </Container>
     </AppBar>
   )
 }

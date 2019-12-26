@@ -5,10 +5,12 @@ import { Link as GatsbyLink } from 'gatsby'
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
-  navLink: {
+  link: {
     display: 'inline-block',
     textDecoration: 'none',
-    width: '100%'
+    width: '100%',
+    color: 'black',
+    fontWeight: 'bold'
   }
 })
 
@@ -17,7 +19,7 @@ const ContainerLink = ({children, to}) => {
   return (
     <GatsbyLink 
       to={to} 
-      className={classes.navLink}
+      className={classes.link}
     >
       {children}
     </GatsbyLink>
