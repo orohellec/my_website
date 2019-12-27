@@ -45,22 +45,16 @@ export default function Template({
         </Grid>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <SecondaryTitle variant="h2" align="center">Collaborateurs</SecondaryTitle>
-          </Grid>
-          <Grid item xs={12} style={{marginBottom: '30px'}}>
-            <Typography align="center">{frontmatter.author}</Typography>
-          </Grid>
-        </Grid>
-        <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <SecondaryTitle variant="h2" align="center">Liens</SecondaryTitle>
+            <SecondaryTitle variant="h2" align="center">Liens Externes</SecondaryTitle>
           </Grid>
           <Grid item xs={12} align="center">
             <OutsideLink href={frontmatter.githubLink}>Repo github</OutsideLink>
           </Grid>
+          { frontmatter.prodLink && 
           <Grid item xs={12} align="center" style={{marginBottom: '30px'}}>
-            <OutsideLink href={frontmatter.prodLink}>Site</OutsideLink>
+            <OutsideLink href={frontmatter.prodLink}>Site en production</OutsideLink>
           </Grid>
+          }
         </Grid>
       </Container>
     </Layout>
@@ -77,7 +71,6 @@ export const pageQuery = graphql`
         imgName
         concept
         description
-        author
         githubLink
         prodLink
         stack

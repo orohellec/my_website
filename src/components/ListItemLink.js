@@ -5,7 +5,11 @@ import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles({
   button: {
-    padding: 0
+    padding: '0 20px',
+    borderRadius: 5,
+    '&:hover': {
+      backgroundColor: '#1f3a41'
+    }
   }
 })
 

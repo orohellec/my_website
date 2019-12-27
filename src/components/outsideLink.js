@@ -4,12 +4,15 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   outsideLink: {
+    borderRadius: 5,
     color: 'black',
     display: 'block',
     textDecoration: 'none',
     fontSize: '1.3rem',
+    maxWidth: '300px',
     '&:hover': {
-      backgroundColor: '#21dafb'
+      backgroundColor: '#1f3a41',
+      color: 'white'
     }
   }
 })

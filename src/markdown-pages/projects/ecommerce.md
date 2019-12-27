@@ -3,10 +3,11 @@ type: "project"
 imgName: "shop-ecommerce.png"
 path: "/portfolio/site-ecommerce"
 title: "Site Ecommerce"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum sed eros in dapibus. Donec tristique justo aliquet magna euismod commodo. Duis id tortor facilisis, eleifend nisi in, volutpat arcu. Ut vestibulum molestie interdum. Mauris molestie congue sapien vel hendrerit. Nulla placerat, erat eu vulputate varius, odio dolor tristique nisl, vitae malesuada nunc purus scelerisque leo. Pellentesque bibendum ipsum nunc, facilisis porttitor lectus varius nec. Sed convallis nisi nibh, eu finibus ligula tincidunt eu. Phasellus aliquet nunc id tortor egestas, in sollicitudin nisl sagittis. Curabitur pellentesque nunc tortor, vitae ultrices nulla dapibus in. Mauris vehicula feugiat massa, sed venenatis mi tincidunt eget. Ut vulputate nunc nec nisl lobortis facilisis. Cras sit amet leo in sapien faucibus sollicitudin."
-author: "Olivier, Quentin, Charles"
-concept: "Réaliser un site ecommerce avec un espace Administrateur"
+description: "Ce projet a été pour nous un bon moyen de revoir et d’approfondir les connaissances accumulées lors de la formation initiale. 
+En dépit des images de pokémons présentes, ce site contient les fonctionnalités essentielles d’un site Ecommerce. Possibilité de créer un compte, d’ajouter des produits à son panier, et de passer commande.
+Il y a également une interface administrateur permettant l’ajout, l’édition, la suppression de produits, le suivi de commande."
+concept: "Site Ecommerce réalisé dans le cadre de la formation The Hacking Project Next avec deux camarades Lyonnais (Quentin et Charles) en télétravail"
 githubLink: "https://github.com/orohellec/shop_ecommerce"
 prodLink: "https://ecommercethp-production.herokuapp.com/"
-stack: "ruby on rails,bootstrap,rspec"
+stack: "ruby on rails,bootstrap,rspec,redis,sidekiq,docker,heroku"
 ---

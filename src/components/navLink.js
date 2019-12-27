@@ -13,6 +13,7 @@ const useStyles = makeStyles({
     padding: '0.7rem',
     fontSize: '1.3rem',
     fontWeight: 'bold',
+    borderRadius: 5,
     '&:hover': {
       backgroundColor: '#1f3a41'
     }

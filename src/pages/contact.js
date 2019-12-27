@@ -14,7 +14,6 @@ import Layout from "../components/layout"
 import MainTitle from "../components/mainTitle"
 
 const ContactPage = () => {
-
   const encode = (data) => {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))

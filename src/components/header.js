@@ -10,6 +10,7 @@ import {
   IconButton,
   Hidden,
   Collapse,
+  Typography
 } from '@material-ui/core'
 
 import MenuIcon from '@material-ui/icons/Menu'
@@ -31,7 +32,7 @@ const Header = ({siteTitle}) => {
         <Hidden only={['xs']}>
           <Grid container justify="space-between">
             <Grid item>
-              <NavLink to="/">Olivier Rohellec</NavLink>
+              <NavLink to="/">Accueil</NavLink>
             </Grid>
             <Grid item>
               <Grid container direction="row">
@@ -53,7 +54,7 @@ const Header = ({siteTitle}) => {
         <Hidden smUp>
           <Collapse in={expanded} timeout="auto" unmountOnExit>
             <Grid container direction="column"  alignContent="center">
-                <NavLink to="/">Olivier Rohellec</NavLink>
+                <NavLink to="/">Accueil</NavLink>
                 <NavLink to="/portfolio">Portfolio</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
             </Grid>
