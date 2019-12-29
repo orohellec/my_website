@@ -74,13 +74,12 @@ const ContactPage = () => {
             </FormControl>
             </Grid>
             <Grid item justify="center">
-              <Button type="submit" fullWidth={true}>Envoyer</Button>
+              <Button variant="contained" color="primary" type="submit" fullWidth={true}>Envoyer</Button>
             </Grid>
           </Grid>
         </form>
       </Box>
     </Layout>
-    
   )
 }
 

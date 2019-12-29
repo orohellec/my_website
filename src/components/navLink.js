@@ -14,6 +14,13 @@ const useStyles = makeStyles({
     fontSize: '1.3rem',
     fontWeight: 'bold',
     borderRadius: 5,
+    backgroundColor: 'black',
+    '&:hover': {
+      backgroundColor: "#296365"
+    }
+  },
+  activeLink: {
+    backgroundColor: '#1f3a41',
     '&:hover': {
       backgroundColor: '#1f3a41'
     }
@@ -27,6 +34,7 @@ const NavLink = ({internLink = true, children, to}) => {
       <GatsbyLink 
         to={to} 
         className={classes.navLink}
+        activeClassName={classes.activeLink}
       >
         {children}
       </GatsbyLink> :

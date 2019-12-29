@@ -6,6 +6,7 @@ import ProfilImage from "../components/images/ProfilImage"
 import MainTitle from "../components/mainTitle"
 import SecondaryTitle from "../components/secondaryTitle"
 import ArrayList from "../components/arrayList"
+import NavLink from "../components/navLink"
 import SEO from "../components/seo"
 
 import { Grid, Typography, Box} from '@material-ui/core'
@@ -34,6 +35,11 @@ export default function Template({data}) {
         </Grid>
       </Grid>
       </Box>
+      <Grid container justify="center" style={{marginTop: '30px'}}>
+        <Grid item>
+          <NavLink to="/portfolio">{"Voir mes projets -->"}</NavLink>
+        </Grid>
+      </Grid>
     </Layout>
   )
 }

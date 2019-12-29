@@ -9,8 +9,7 @@ import {
   Container,
   IconButton,
   Hidden,
-  Collapse,
-  Typography
+  Collapse
 } from '@material-ui/core'
 
 import MenuIcon from '@material-ui/icons/Menu'

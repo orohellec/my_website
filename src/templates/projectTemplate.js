@@ -1,11 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Container, Grid, Typography } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 import Layout from "../components/layout"
 import MainTitle from '../components/mainTitle'
 import SecondaryTitle from '../components/secondaryTitle'
 import Image from '../components/image'
 import OutsideLink from '../components/outsideLink'
+import NavLink from '../components/navLink'
 import ArrayList from '../components/arrayList'
 
 export default function Template({
@@ -16,7 +17,6 @@ export default function Template({
 
   return (
     <Layout>
-      <Container maxWidth="lg">
         <MainTitle title={frontmatter.title} />
         <Grid container spacing={3}>
           <Grid item xs={12} md={7} lg={8} style={{marginBottom: '50px'}}>
@@ -56,7 +56,11 @@ export default function Template({
           </Grid>
           }
         </Grid>
-      </Container>
+        <Grid container justify="center" style={{marginTop: '30px'}}>
+          <Grid item>
+            <NavLink to="/portfolio">{"<-- Retour"}</NavLink>
+          </Grid>
+        </Grid>
     </Layout>
   )
 }
