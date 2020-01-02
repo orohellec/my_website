@@ -3,7 +3,7 @@ module.exports = {
     title: `Olivier Rohellec`,
     description: `Site portfolio Olivier Rohellec. Développeur web Fullstack React / Ruby on Rails`,
     author: `Olivier Rohellec`,
-    url: `https://www.olivier-rohellec.com`,
+    siteUrl: `https://www.olivier-rohellec.com`,
     image: `/images/profil-picture.JPG`
   },
   plugins: [
