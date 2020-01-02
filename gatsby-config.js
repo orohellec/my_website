@@ -9,21 +9,27 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/admin`]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    `gatsby-plugin-material-ui`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        exclude: [`/admin`]
-      }
-    },
-    `gatsby-plugin-material-ui`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

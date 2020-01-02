@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import { Container, Box } from '@material-ui/core'
 
@@ -19,16 +18,6 @@ import Footer from './footer'
 import theme from '../theme'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <Helmet>
@@ -36,6 +25,7 @@ const Layout = ({ children }) => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
         />
+        <meta property="og:image" content="/example-image.png"/>
       </Helmet>
       <CssBaseline />
       <ThemeProvider theme={theme}>
