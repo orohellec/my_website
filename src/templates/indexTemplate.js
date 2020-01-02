@@ -16,7 +16,7 @@ export default function Template({data}) {
   const { frontmatter } = markdownRemark
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Accueil" />
       <MainTitle title={frontmatter.mainTitle} />
       <Grid container direction="row" align="center" justify="center"  spacing={3}>
         <Grid item xs={12} sm={6} md={3} ><ProfilImage /></Grid>

@@ -1,6 +1,7 @@
 ---
 type: "home"
 title: "Olivier Rohellec"
+titleTemplate: "Accueil"
 path: "/"
 mainTitle: "Développeur fullstack React / Ruby on Rails"
 introduction: "Après un parcours assez atypique j’ai décidé de me reconvertir dans le développement web depuis un peu plus d’un an maintenant.

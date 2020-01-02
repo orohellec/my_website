@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <CssBaseline />
       <ThemeProvider theme={theme}>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
         <Box my={5}>
           <Container>
             <main>{children}</main>

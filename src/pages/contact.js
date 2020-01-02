@@ -10,6 +10,7 @@ import {
   Box
 } from '@material-ui/core'
 
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import MainTitle from "../components/mainTitle"
 
@@ -46,6 +47,7 @@ const ContactPage = () => {
 
   return (
     <Layout>
+      <SEO title="Contact" />
       <Box mx="auto" maxWidth="600px">
         <MainTitle title="Contact"/>
         <form onSubmit={handleSubmit}>

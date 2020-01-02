@@ -15,7 +15,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu'
 import NavLink from './navLink';
 
-const Header = ({siteTitle}) => {
+const Header = () => {
   const [expanded, setExpanded] = React.useState(false);
   const handleExpandClick = () => {
     setExpanded(!expanded);

@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Card from "../components/Card"
 import { Grid } from '@material-ui/core'
 import MainTitle from '../components/mainTitle'
+import SEO from "../components/seo"
 
 export default function Template({ data }) {
   const { allMarkdownRemark } = data
@@ -25,6 +26,7 @@ export default function Template({ data }) {
 
   return (
     <Layout>
+      <SEO title="Portfolio" />
       <MainTitle title="Mes projets" />
       <Grid container justify="center" spacing={4}>
         {cardList}
