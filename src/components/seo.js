@@ -16,10 +16,10 @@ function SEO({ description, lang, meta, title, url, image }) {
       query {
         site {
           siteMetadata {
-            title,
-            description,
-            siteUrl: url,
-            author,
+            title
+            description
+            siteUrl: url
+            author
             image
           }
         }
