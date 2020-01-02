@@ -16,10 +16,10 @@ function SEO({ description, lang, meta, title, url, image }) {
       query {
         site {
           siteMetadata {
-            title
-            description
-            author
-            url
+            title,
+            description,
+            siteUrl: url,
+            author,
             image
           }
         }
@@ -28,8 +28,8 @@ function SEO({ description, lang, meta, title, url, image }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const metaUrl = url || site.siteMetadata.url
-  const metaImage = image || site.siteMetadata.image
+  const metaUrl = url || site.siteMetadata.siteUrl
+  const metaImage = site.siteMetadata.siteUrl + (image || site.siteMetadata.image)
 
   return (
     <Helmet
