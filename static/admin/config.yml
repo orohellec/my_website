@@ -12,13 +12,13 @@ collections:
     folder: src/markdown-pages/projects
     create: true
     fields:
-      - { name: type, label: Type }
-      - { name: title, label: Titre }
-      - { name: path, label: Chemin (/portfolio/...) }
-      - { name: imgName, label: Nom de l'image }
-      - { name: concept, label: Concept }
-      - { name: description, label: Description }
-      - { name: stack, label: Stack (format ruby,rails,javascript...)}
-      - { name: gitHubLink, label: Lien Github }
-      - { name: prodLink, label: Lien de l'application en production }
+      - { name: type, label: Type, widget: string }
+      - { name: title, label: Titre, widget: string }
+      - { name: path, label: Chemin (/portfolio/...), widget: string }
+      - { name: imgName, label: Nom de l'image, widget: string }
+      - { name: concept, label: Concept, widget: text }
+      - { name: description, label: Description, widget: text }
+      - { name: stack, label: Stack (format ruby,rails,javascript...), widget: string }
+      - { name: githubLink, label: Lien Github, widget: string }
+      - { name: prodLink, label: Lien de l'application en production, widget: string }
       
