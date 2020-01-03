@@ -7,23 +7,18 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: src/markdown-pages/posts
-    create: true
-    fields:
-      - { name: type, label: Type }
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
   - name: projet
     label: Projet
     folder: src/markdown-pages/projects
     create: true
     fields:
       - { name: type, label: Type }
-      - { name: imgName, label: Image File }
+      - { name: title, label: Titre }
+      - { name: path, label: Chemin (/portfolio/...) }
+      - { name: imgName, label: Nom de l'image }
+      - { name: concept, label: Concept }
       - { name: description, label: Description }
-      - { name: path, label: Path }
-      - { name: title, label: Title }
+      - { name: stack, label: Stack (format ruby,rails,javascript...)}
+      - { name: gitHubLink, label: Lien Github }
+      - { name: prodLink, label: Lien de l'application en production }
+      
