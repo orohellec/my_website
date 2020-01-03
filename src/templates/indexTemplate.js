@@ -29,11 +29,15 @@ export default function Template({data}) {
             }}
           />
         </Grid>
-        <Grid item xs={12} md={9}><Typography variant="h6" align="justify">{frontmatter.introduction}</Typography></Grid>
+        <Grid item xs={12} md={9}>
+          <Typography variant="h6" align="justify">
+            {frontmatter.introduction}
+          </Typography>
+        </Grid>
       </Grid>
       <Box mt={5}>
       <MainTitle title="Technologies" />
-      <Grid container direction="row" align="center" justify="center"  spacing={3}>
+      <Grid container direction="row" align="center" justify="center" spacing={3}>
         <Grid item xs={12} sm={6}>
           <SecondaryTitle>Front-end</SecondaryTitle>
           <ArrayList arr={frontmatter.frontTechnos.split(',')} />

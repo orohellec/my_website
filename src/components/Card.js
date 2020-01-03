@@ -15,7 +15,16 @@ export default function ImgMediaCard(props) {
           <Image filename={props.filename} alt={props.alt} />
         </Box>
         <CardContent>
-          <Typography gutterBottom align="center" variant="h5">
+          <Typography 
+            gutterBottom align="center" 
+            variant="h5" 
+            style={{
+              backgroundColor: "#296365", 
+              color: 'white', 
+              fontWeight: 'bold', 
+              borderRadius: '5px'
+            }}
+          >
             {props.title}
           </Typography>
         </CardContent>

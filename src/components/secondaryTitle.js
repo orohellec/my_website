@@ -8,9 +8,11 @@ const SecondaryTitle = ({children}) => {
       variant="h2" 
       align="center"
       style={{
-        backgroundColor: "#296365", 
-        color: 'white', 
-        borderRadius: "5px"
+        // backgroundColor: "#296365", 
+        color: '#296365', 
+        borderRadius: "5px",
+        paddingBottom:"10px",
+        borderBottom: "solid"
       }}
     >
       {children}

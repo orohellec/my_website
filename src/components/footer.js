@@ -44,11 +44,11 @@ const Footer = () => {
         <List disablePadding>
           <ListItemLink href="https://github.com/orohellec">
             <ListItemIcon><GitHubIcon color="secondary"/></ListItemIcon>
-            <ListItemText><Typography variant="body1">GitHub</Typography></ListItemText>
+            <ListItemText primaryTypographyProps={{style: {fontSize: '1.3rem', textDecoration: 'underline'}}}>GitHub</ListItemText>
           </ListItemLink>
           <ListItemLink href="https://www.linkedin.com/in/olivierrohellec/">
             <ListItemIcon><LinkedInIcon color="secondary"/></ListItemIcon>
-            <ListItemText>LinkedIn</ListItemText>
+            <ListItemText primaryTypographyProps={{style: {fontSize: '1.3rem', textDecoration: 'underline'}}}>LinkedIn</ListItemText>
           </ListItemLink>
         </List>
       </Grid>
