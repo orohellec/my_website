@@ -76,7 +76,14 @@ const ContactPage = () => {
             </FormControl>
             </Grid>
             <Grid item justify="center">
-              <Button variant="contained" color="primary" type="submit" fullWidth={true}>Envoyer</Button>
+              <Button 
+                variant="contained" 
+                type="submit" 
+                fullWidth={true} 
+                style={{fontWeight: 'bold', color: 'white', backgroundColor: '#cc9937'}}
+              >
+                Envoyer
+              </Button>
             </Grid>
           </Grid>
         </form>

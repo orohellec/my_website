@@ -34,7 +34,7 @@ export default function Template({
           <SecondaryTitle>Concept</SecondaryTitle>
         </Grid>
         <Grid item xs={12} style={{marginBottom: '30px'}}>
-          <Typography variant="body1" align="center">{frontmatter.concept}</Typography>
+          <Typography variant="body1" align="justify">{frontmatter.concept}</Typography>
         </Grid>
       </Grid>
       <Grid container spacing={3}>
