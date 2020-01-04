@@ -23,7 +23,7 @@ function SEO({ description, lang, meta, title, url, image }) {
             image
           }
         }
-        ogDefaultImage: allFile(filter: {sourceInstanceName: {eq: "images"}, name: {eq: "profil-picture"}}) {
+        ogDefaultImage: allFile(filter: {sourceInstanceName: {eq: "images"}, name: {eq: "my-website"}}) {
           edges {
             node {
               childImageSharp {

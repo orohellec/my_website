@@ -3,8 +3,7 @@ module.exports = {
     title: `Olivier Rohellec`,
     description: `Site portfolio Olivier Rohellec. Développeur web Fullstack React / Ruby on Rails`,
     author: `Olivier Rohellec`,
-    siteUrl: `https://www.olivier-rohellec.com`,
-    image: `/images/profil-picture.JPG`
+    siteUrl: `https://www.olivier-rohellec.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
